@@ -82,4 +82,11 @@ main#homepage p {
     text-align: center;
 }
 
+main#page-simple p.date {
+    margin: -20px 0px 24px;
+    color: #666;
+}
 
+#title {
+    color:black
+}
