@@ -5,7 +5,7 @@ body {
     text-rendering:optimizeLegibility;
     margin: 10px auto 200px;
     width: 700px;
-    font-family: serif;
+    font-family:serif;
     font-size: 20px;
     line-height: 24px;
     background:	whitesmoke;
@@ -60,8 +60,9 @@ hr.footer-break {
 }
 
 footer {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 20px;
+    text-transform: lowercase;
 }
 footer nav {
     margin: 0 auto;
