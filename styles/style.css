@@ -4,25 +4,46 @@ html {
 body {
     text-rendering:optimizeLegibility;
     margin: 10px auto 200px;
-    width: 700px;
-    font-family:serif;
-    font-size: 20px;
-    line-height: 24px;
+    width: 800px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 20px;
     background:	whitesmoke;
     color: rgb(0, 0, 0);
 }
 
+/* Styling the header */
+
 header {
-    text-transform: lowercase;
-    font-size: 24px;
-    line-height: 30px;
+  z-index: 2;
+  position: fixed;
+  width: 800px;
+  background-color: whitesmoke;
+  text-transform: lowercase;
+  font-size: 24px;
+  line-height: 30px;
+  top: 0;
 }
 
 header nav {
-    float: right;
-    font-size: 20px;
-    line-height: 30px;
+  float: right;
+  font-size: 22px;
+  line-height: 30px;
 }
+
+a {
+  color: #283bcb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header + * {
+  padding-top: 30px; /* Adjust the padding to account for the fixed header height */
+}
+
 
 a {
     color: #283bcb;
@@ -32,62 +53,93 @@ a:hover {
     text-decoration: underline
 }
 
+/* Styling the card */
 
-hr.header-break {
-    overflow: visible; /* For IE */
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
-    margin-bottom: -30px;
-}
-hr.header-break:before { /* Not really supposed to work, but does */
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
-}
-hr.footer-break {
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-}
-
-footer {
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: lowercase;
-}
-footer nav {
-    margin: 0 auto;
-    text-align: center;
-}
-
-main {
-    margin: 36px 0px;
-}
-
-p, ul, ol {
-    margin: 0px 0px 24px;
-}
-
-main#homepage p {
+.card {
     font-size: 24px;
     line-height: 36px;
     text-align: center;
 }
 
-main#page-simple p.date {
+#no-underline {
+    text-decoration: none;
+}
+
+/* Title and date */
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.date{
     margin: -20px 0px 24px;
     color: #666;
 }
 
-#title {
-    color:black
+/* Styling the projects section */
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.project-img {
+  flex-basis: 380px;
+  margin-right: 20px;
+}
+
+.project-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover img {
+  transform: scale(0.9);
+}
+
+.project-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+
+.project-details p {
+  margin: 0;
+  flex: 1;
+  font-size: 20px;
+  line-height: 24px;
+  
+}
+
+/* Styling the footer */
+hr.footer-break {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+}
+
+footer {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: lowercase;
+}
+footer nav {
+  margin: 0 auto;
+  text-align: center;
 }

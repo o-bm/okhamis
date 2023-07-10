@@ -1,5 +1,3 @@
-<!--python -m http.server 8080-->
-<!--http://localhost:8080/-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,38 +6,99 @@
     <title>Omar Khamis</title>
 </head>
 <body>
+
     <header>
-        <a id='logo' href='/'>Omar Khamis</a>
-        <nav>
-            <a href = './projects/index.html'> Projects</a>
-            | <a href = './notes/index.html'>Notes</a>
-            | <a href = './links/index.html'>Links</a>
-            | <a href = './resume/index.html'>Resume</a>
-        </nav>
-    <hr class = 'header-break'>
-    </header>
-    <main id = 'homepage'>
-        <p id = 'intro'>Hi, I'm Omar.</p>
-        <p>
-            Currently a Computer Science student at the University of Toronto.
-        </p>
-        <p>
-           
-            Feel free to explore my  <a href='/projects/'>projects</a> or browse through my course <a href = '/notes/'>notes</a>.
-        </p>
-        <p>
-            If you want to get in touch with me, <a href='mailto:steve@omar.khamis@mail.utoronto.ca'>email</a>
-            is best.
-        </p>
+        <div class="header-content">
+          <a id="logo" href="/">Omar Khamis</a>
+          <nav>
+            <a href="#projects">Projects</a>
+            | <a href="#notes">Notes</a>
+            | <a href="#resume">Resume</a>
+          </nav>
+          <hr>
+        </div>
+      </header>
+      
+    <main>
+        <div class="card">
+            <p>Hi, I'm Omar.</p>
+            <p>
+                Currently a Computer Science student at the <a id="no-underline">University of Toronto</a>.
+            </p>
+            <p>
+                Feel free to explore my projects or browse through my course notes.
+            </p>
+            <p>
+                If you want to get in touch with me, <a href='mailto:omar.khamis@mail.utoronto.ca'>email</a>
+                is best.
+            </p>
+            <hr>
+        </div>
+
+        <div class="projects" id="projects">
+            <h3 >Projects</h3>
+            <p class="date">Last updated July 10th, 2023.</p>
+            <div class="project">
+                <div class="project-img">
+                    <a href="https://okhamis.pythonanywhere.com/">
+                        <img src="styles/hufcompress.png" alt="HufCompress Image">
+                    </a>
+                    
+                </div>
+                <div class="project-details">
+                  <h3><a href="https://okhamis.pythonanywhere.com/">HufCompress</a></h3>
+                  <p>
+                    HufCompress is a <a id="no-underline">Flask-based python</a> web application that allows users to compress and decompress files using the <a id="no-underline">Huffman coding algorithm</a>. It provides a simple and user-friendly interface for uploading files, performing compression or decompression, and displaying relevant information about the process.
+                  </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-img">
+                    <a href="https://github.com/o-bm/tictactoe">
+                        <img src="styles/tictactoe.png" alt="Tic-Tac-Toe">
+                    </a>
+                  
+                </div>
+                <div class="project-details">
+                  <h3><a href="https://github.com/o-bm/tictactoe">TicTacToeAI</a></h3>
+                  <p>
+                    Tic-Tac-Toe AI is a <a id="no-underline">pygame</a> implementation that uses the <a id="no-underline">minimax algorithm</a> to create an <a id="no-underline">unbeatable AI player</a>. The minimax algorithm is a common approach used in game playing to determine the optimal move in a turn-based game.
+                  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <hr>
+            <h3 id="notes">Notes</h3>
+            <p class='date'>Last updated on June 6th, 2023.</p>
+            <p>This is not a comprehensive list; I just post my notes for courses that others might find helpful.</p>
+            <ul>
+                <li><a href = ''>MAT102: Intro to Proofs</a></li>
+                <li><a href = ''>MAT137: Calculus with Proofs</a></li>
+                <li><a href = ''>STA107: Intro to Probability</a></li>
+                <li><a href = ''>MAT223: Linear Algebra I</a></li>
+                <li><a href = ''>CSC148: Data Structures</a></li>
+            </ul>
+        </div>
+
+        <div class="resume" id="resume">
+            <hr>
+            <h3>
+                Resume
+            </h3>
+            <p class="date">Up to date.</p>
+            <p><a>Here</a> is a copy of my resume for download.</p>
+
+        </div>
     </main>
     <footer>
         <hr class='footer-break'/>
         <nav>
-            <a href='https://github.com/iiobm127/'>GitHub</a>
-             -  <a href='https://mastodon.social/@sjl'>LinkedIn</a>
+            <a href='https://github.com/o-bm'>GitHub</a>
+             -  <a href='https://www.linkedin.com/in/okhamis/'>LinkedIn</a>
         </nav>
     </footer>
-
-    
 </body>
 </html>
